@@ -31,7 +31,7 @@ _Track your NYSC allowance and expenses effortlessly with interactive charts and
 ---
 
 ## Screenshot
-![Screenshot of NYSC Expense Tracker](./screenshot.png) 
+![Screenshot of NYSC Expense Tracker](./IMG_1590.jpeg) 
 
 ## Live Demo
 [View Live Demo](https://your-live-demo-link.com) 
