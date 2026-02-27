@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NYSC Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h1>NYSC Expense Tracker</h1>
+
+	<!-- Balance Summary -->
+	<div class="balance">
+		<h2>Total Balance: ₦<span id="balance">0</span></h2>
+	</div>
+	<div class="summary">
+		<div>Income: ₦<span id="total-income">0</span></div>
+		<div>Expenses: ₦<span id="total-expense">0</span></div>
+	</div>
+
+	<!-- Transaction Form -->
+	<div class="form-container">
+		<h3>Add Transaction</h3>
+		<form id="transaction-form">
+			<input type="text" id="description" placeholder="Description" required>
+			<input type="number" id="amount" placeholder="Amount" required>
+			<select id="category">
+				<option value="Allowance">Allowance</option>
+				<option value="Food">Food</option>
+				<option value="Transport">Transport</option>
+				<option value="Bills">Bills</option>
+				<option value="Others">Others</option>
+			</select>
+			<select id="type">
+				<option value="income">Income</option>
+				<option value="expense">Expense</option>
+			</select>
+			<button type="submit">Add</button>
+		</form>
+	</div>
+
+	<!-- Filter Panel -->
+	<div class="filter-panel">
+		<h3>Filter Transactions</h3>
+		<div class="filters">
+			<label>
+				Category:
+				<select id="filter-category">
+					<option value="All">All</option>
+					<option value="Allowance">Allowance</option>
+					<option value="Food">Food</option>
+					<option value="Transport">Transport</option>
+					<option value="Bills">Bills</option>
+					<option value="Others">Others</option>
+				</select>
+			</label>
+			<label>
+				From:
+				<input type="date" id="filter-from">
+			</label>
+			<label>
+				To:
+				<input type="date" id="filter-to">
+			</label>
+			<button id="apply-filter">Apply Filter</button>
+			<button id="clear-filter">Clear Filter</button>
+		</div>
+	</div>
+
+	<!-- Transactions List -->
+	<div class="transactions-container">
+		<h3>Transactions</h3>
+		<ul id="transactions-list"></ul>
+	</div>
+
+	<!-- Category Bar Chart -->
+	<div class="chart-container">
+		<h3>Spending by Category</h3>
+		<div class="chart-wrapper">
+			<div id="chart"></div>
+		</div>
+	</div>
+
+	<!-- Line Chart -->
+	<div class="line-chart-container">
+		<h3>Income vs Expense Over Time</h3>
+		<div class="canvas-wrapper">
+			<canvas id="lineChart"></canvas>
+		</div>
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
